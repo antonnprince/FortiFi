@@ -2,14 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import RulesDisplay from './components/RulesDisplay';
 import NewRules from './components/NewRules';
-import Helia from './components/IPFSDagCborHandler';
+import Docs from './components/Docs';
 
 const App = () => {
   return (
     <Router>
       <div className="flex h-screen">
         {/* Sidebar */}
-        <div className="w-64 h-screen sticky top-0 bg-gray-800 text-white p-6">
+        <div className="w-64 h-full bg-gray-800 text-white p-6">
           <h1 className="text-2xl font-bold text-center mb-10">FortiFi Panel</h1>
           <ul>
             <li className="mb-4">
@@ -19,7 +19,7 @@ const App = () => {
               <Link to="/add" className="text-gray-300 hover:text-white">Add New Rule</Link>
             </li>
             <li className="mb-4">
-              <a href="/helia" className="text-gray-300 hover:text-white">Helia</a>
+              <a href="/docs" className="text-gray-300 hover:text-white">Docs</a>
             </li>
           </ul>
         </div>
@@ -32,7 +32,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<RulesDisplay />} />
               <Route path="/add" element={<NewRules />} />
-              <Route path="/helia" element={<Helia/>} />
+              <Route path="/docs" element={<Docs />} />
             </Routes>
           </div>
         </div>
