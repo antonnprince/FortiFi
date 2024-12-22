@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import RulesDisplay from './components/RulesDisplay';
 import NewRules from './components/NewRules';
+import Helia from './components/IPFSDagCborHandler';
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
               <Link to="/add" className="text-gray-300 hover:text-white">Add New Rule</Link>
             </li>
             <li className="mb-4">
-              <a href="#" className="text-gray-300 hover:text-white">Logout</a>
+              <a href="/helia" className="text-gray-300 hover:text-white">Helia</a>
             </li>
           </ul>
         </div>
@@ -31,6 +32,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<RulesDisplay />} />
               <Route path="/add" element={<NewRules />} />
+              <Route path="/helia" element={<Helia/>} />
             </Routes>
           </div>
         </div>
